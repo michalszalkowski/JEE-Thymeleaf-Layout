@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>jee Thymeleaf</title>
+</head>
+<body>
+
+<div class="container">
+
+
+    <hr/>
+    <h1>main</h1>
+    <img th:src="@{/static/img/opimoto.png}" style="padding: 35px;"/>
+    <hr/>
+    <h1>fragment</h1>
+    <div th:replace="fragments.html :: test"></div>
+    <hr/>
+    <h1>layout</h1>
+    <section layout:fragment="content">Page content</section>
+</div>
+
+</body>
+</html>
